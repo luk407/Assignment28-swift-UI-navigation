@@ -9,10 +9,12 @@ import SwiftUI
 
 struct TransportDetailsScreen: View {
     
+    //MARK: Properties
     var destination: Destination
     
     @Binding var path: NavigationPath
     
+    //MARK: Body
     var body: some View {
         VStack(spacing: 20, content: {
             List {

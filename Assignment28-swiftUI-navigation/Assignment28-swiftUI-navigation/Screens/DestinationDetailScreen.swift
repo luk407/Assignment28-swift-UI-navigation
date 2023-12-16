@@ -9,10 +9,12 @@ import SwiftUI
 
 struct DestinationDetailScreen: View {
     
+    //MARK: Properties
     var destination: Destination
     
     @Binding var path: NavigationPath
     
+    //MARK: Body
     var body: some View {
         ZStack {
             GeometryReader { geometry in

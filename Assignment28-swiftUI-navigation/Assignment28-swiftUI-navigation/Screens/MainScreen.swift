@@ -9,12 +9,14 @@ import SwiftUI
 
 struct MainScreen: View {
     
+    //MARK: Properties
     @ObservedObject private var viewModel = MainScreenViewModel()
     
     @State private var path = NavigationPath()
     
     @State private var isTipShowed = false
     
+    //MARK: Body
     var body: some View {
         VStack(spacing: 20) {
             NavigationStack(path: $path) {
