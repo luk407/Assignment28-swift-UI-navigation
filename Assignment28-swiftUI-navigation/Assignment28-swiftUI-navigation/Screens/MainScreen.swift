@@ -22,16 +22,10 @@ struct MainScreen: View {
                     ScrollView {
                         ForEach(viewModel.destinations) { destination in
                             NavigationLink(value: destination) {
-                                VStack(spacing: 0) {
-                                    viewModel.setImage(imageURL: URL(string: destination.mainImage)!, width: 300, height: 200)
-                                    Text("\(destination.cityName)")
-                                        .bold()
-                                        .font(.system(size: 20))
-                                    Spacer()
-                                }
+                                DestinationCardView(cityName: destination.cityName, imageURL: URL(string: destination.mainImage)!, width: 300, height: 200)
                             }
                             .navigationDestination(for: Destination.self) { destination in
-                                DestinationDetailScreen(viewModel: viewModel, destination: destination, path: $path)
+                                DestinationDetailScreen(destination: destination, path: $path)
                             }
                             .foregroundStyle(Color.black)
                         }
@@ -41,8 +35,10 @@ struct MainScreen: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .listStyle(.plain)
                 
-                Button("Show me a tip") {
+                Button {
                     isTipShowed = true
+                } label: {
+                    ButtonDesign(buttonText: "Show me a tip")
                 }
                 .alert(isPresented: $isTipShowed, content: {
                     Alert(title: Text("Traveling Tip"),

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A18653D62B2E12D7007CA426 /* DestinationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18653D52B2E12D7007CA426 /* DestinationCardView.swift */; };
+		A18653D82B2E13F7007CA426 /* DownloadedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18653D72B2E13F7007CA426 /* DownloadedImageView.swift */; };
+		A18653DA2B2E1A32007CA426 /* ButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18653D92B2E1A32007CA426 /* ButtonDesign.swift */; };
+		A18653DC2B2E1E4B007CA426 /* DetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18653DB2B2E1E4B007CA426 /* DetailCardView.swift */; };
 		A1CE7E832B29FFC40089D10B /* Assignment28_swiftUI_navigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE7E822B29FFC40089D10B /* Assignment28_swiftUI_navigationApp.swift */; };
 		A1CE7E852B29FFC40089D10B /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE7E842B29FFC40089D10B /* MainScreen.swift */; };
 		A1CE7E872B29FFC50089D10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CE7E862B29FFC50089D10B /* Assets.xcassets */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A18653D52B2E12D7007CA426 /* DestinationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCardView.swift; sourceTree = "<group>"; };
+		A18653D72B2E13F7007CA426 /* DownloadedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedImageView.swift; sourceTree = "<group>"; };
+		A18653D92B2E1A32007CA426 /* ButtonDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDesign.swift; sourceTree = "<group>"; };
+		A18653DB2B2E1E4B007CA426 /* DetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardView.swift; sourceTree = "<group>"; };
 		A1CE7E7F2B29FFC40089D10B /* Assignment28-swiftUI-navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment28-swiftUI-navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CE7E822B29FFC40089D10B /* Assignment28_swiftUI_navigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment28_swiftUI_navigationApp.swift; sourceTree = "<group>"; };
 		A1CE7E842B29FFC40089D10B /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -90,6 +98,17 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		A18653D42B2E12AC007CA426 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A18653D92B2E1A32007CA426 /* ButtonDesign.swift */,
+				A18653D72B2E13F7007CA426 /* DownloadedImageView.swift */,
+				A18653D52B2E12D7007CA426 /* DestinationCardView.swift */,
+				A18653DB2B2E1E4B007CA426 /* DetailCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A1CE7E762B29FFC40089D10B = {
 			isa = PBXGroup;
 			children = (
@@ -110,9 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				A18653D02B2DB8FD007CA426 /* App */,
-				A18653CE2B2DB893007CA426 /* Screens */,
-				A18653CD2B2DB87B007CA426 /* ViewModel */,
 				A18653CC2B2DB85D007CA426 /* Model */,
+				A18653CD2B2DB87B007CA426 /* ViewModel */,
+				A18653CE2B2DB893007CA426 /* Screens */,
+				A18653D42B2E12AC007CA426 /* Views */,
 				A1CE7E862B29FFC50089D10B /* Assets.xcassets */,
 				A1CE7E882B29FFC50089D10B /* Preview Content */,
 			);
@@ -203,11 +223,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18653D82B2E13F7007CA426 /* DownloadedImageView.swift in Sources */,
 				A1CE7E852B29FFC40089D10B /* MainScreen.swift in Sources */,
 				A1CE7EA02B2A2B9D0089D10B /* HotelDetailScreen.swift in Sources */,
+				A18653D62B2E12D7007CA426 /* DestinationCardView.swift in Sources */,
 				A1CE7E982B2A08110089D10B /* MainScreenViewModel.swift in Sources */,
 				A1CE7E832B29FFC40089D10B /* Assignment28_swiftUI_navigationApp.swift in Sources */,
 				A1CE7E9A2B2A226B0089D10B /* DestinationDetailScreen.swift in Sources */,
+				A18653DC2B2E1E4B007CA426 /* DetailCardView.swift in Sources */,
+				A18653DA2B2E1A32007CA426 /* ButtonDesign.swift in Sources */,
 				A1CE7E9C2B2A2A8D0089D10B /* TransportDetailsScreen.swift in Sources */,
 				A1CE7E962B2A07050089D10B /* DestinationModel.swift in Sources */,
 				A1CE7E9E2B2A2B600089D10B /* MustSeeDetailScreen.swift in Sources */,
