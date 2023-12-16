@@ -9,29 +9,33 @@ import SwiftUI
 
 struct TransportDetailsScreen: View {
     
-    @ObservedObject var destinationModel: DestinationModel
+    var viewModel: MainScreenViewModel
+    
+    var destination: Destination
     
     @Binding var path: NavigationPath
     
     var body: some View {
         VStack(spacing: 20, content: {
-            destinationModel.transport.image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(10)
+            viewModel.setImage(imageURL: URL(string: destination.transport[0].image)!, width: 300, height: 200)
+            
             HStack {
-                Text("Name: \(destinationModel.transport.name)")
+                Text("Name: \(destination.transport[0].name)")
                 Spacer()
             }
+            
             HStack {
-                Text("Description: \(destinationModel.transport.description)")
+                Text("Description: \(destination.transport[0].description)")
                 Spacer()
             }
+            
             HStack {
-                Text("Price: \(destinationModel.transport.price ?? "")")
+                Text("Price: \(destination.transport[0].price ?? "")")
                 Spacer()
             }
+            
             Spacer()
+            
             Button(action: {
                 path = NavigationPath()
             }, label: {

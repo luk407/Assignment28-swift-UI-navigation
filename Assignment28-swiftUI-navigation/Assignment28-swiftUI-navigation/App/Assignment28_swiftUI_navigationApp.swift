@@ -11,7 +11,7 @@ import SwiftUI
 struct Assignment28_swiftUI_navigationApp: App {
     var body: some Scene {
         WindowGroup {
-            MainScreenView()
+            MainScreen()
         }
     }
 }

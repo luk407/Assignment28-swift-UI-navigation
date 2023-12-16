@@ -9,29 +9,33 @@ import SwiftUI
 
 struct MustSeeDetailScreen: View {
     
-    @ObservedObject var destinationModel: DestinationModel
+    var viewModel: MainScreenViewModel
+    
+    var destination: Destination
     
     @Binding var path: NavigationPath
     
     var body: some View {
         VStack(spacing: 20, content: {
-            destinationModel.mustSee.image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(10)
+            viewModel.setImage(imageURL: URL(string: destination.mustSee[0].image)!, width: 300, height: 200)
+            
             HStack {
-                Text("Name: \(destinationModel.mustSee.name)")
+                Text("Name: \(destination.mustSee[0].name)")
                 Spacer()
             }
+            
             HStack {
-                Text("Description: \(destinationModel.mustSee.description)")
+                Text("Description: \(destination.mustSee[0].description)")
                 Spacer()
             }
+            
             HStack {
-                Text("Price: \(destinationModel.mustSee.price ?? "")")
+                Text("Price: \(destination.mustSee[0].price ?? "")")
                 Spacer()
             }
+            
             Spacer()
+            
             Button(action: {
                 path = NavigationPath()
             }, label: {
@@ -43,5 +47,5 @@ struct MustSeeDetailScreen: View {
 }
 
 //#Preview {
-//    MustSeeDetailScreen()
+//    TransportDetailsScreen()
 //}

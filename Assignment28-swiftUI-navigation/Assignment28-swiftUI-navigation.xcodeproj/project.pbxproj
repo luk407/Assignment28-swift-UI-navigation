@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A1CE7E832B29FFC40089D10B /* Assignment28_swiftUI_navigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE7E822B29FFC40089D10B /* Assignment28_swiftUI_navigationApp.swift */; };
-		A1CE7E852B29FFC40089D10B /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE7E842B29FFC40089D10B /* MainScreenView.swift */; };
+		A1CE7E852B29FFC40089D10B /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CE7E842B29FFC40089D10B /* MainScreen.swift */; };
 		A1CE7E872B29FFC50089D10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CE7E862B29FFC50089D10B /* Assets.xcassets */; };
 		A1CE7E8A2B29FFC50089D10B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CE7E892B29FFC50089D10B /* Preview Assets.xcassets */; };
 		A1CE7E942B2A03540089D10B /* GenericNetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = A1CE7E932B2A03540089D10B /* GenericNetworkLayer */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		A1CE7E7F2B29FFC40089D10B /* Assignment28-swiftUI-navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment28-swiftUI-navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CE7E822B29FFC40089D10B /* Assignment28_swiftUI_navigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment28_swiftUI_navigationApp.swift; sourceTree = "<group>"; };
-		A1CE7E842B29FFC40089D10B /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		A1CE7E842B29FFC40089D10B /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		A1CE7E862B29FFC50089D10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1CE7E892B29FFC50089D10B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1CE7E952B2A07050089D10B /* DestinationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationModel.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		A18653CE2B2DB893007CA426 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				A1CE7E842B29FFC40089D10B /* MainScreenView.swift */,
+				A1CE7E842B29FFC40089D10B /* MainScreen.swift */,
 				A1CE7E992B2A226B0089D10B /* DestinationDetailScreen.swift */,
 				A18653CF2B2DB8C5007CA426 /* Details */,
 			);
@@ -203,7 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1CE7E852B29FFC40089D10B /* MainScreenView.swift in Sources */,
+				A1CE7E852B29FFC40089D10B /* MainScreen.swift in Sources */,
 				A1CE7EA02B2A2B9D0089D10B /* HotelDetailScreen.swift in Sources */,
 				A1CE7E982B2A08110089D10B /* MainScreenViewModel.swift in Sources */,
 				A1CE7E832B29FFC40089D10B /* Assignment28_swiftUI_navigationApp.swift in Sources */,

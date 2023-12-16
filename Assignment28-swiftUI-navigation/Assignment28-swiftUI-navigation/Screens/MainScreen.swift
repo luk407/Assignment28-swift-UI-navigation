@@ -7,34 +7,31 @@
 
 import SwiftUI
 
-struct MainScreenView: View {
+struct MainScreen: View {
     
-    @ObservedObject private var mainScreenViewModel = MainScreenViewModel()
+    @ObservedObject private var viewModel = MainScreenViewModel()
     
-    @State var path = NavigationPath()
+    @State private var path = NavigationPath()
     
-    @State var isTipShowed = false
+    @State private var isTipShowed = false
     
     var body: some View {
         VStack(spacing: 20) {
             NavigationStack(path: $path) {
                 List {
                     ScrollView {
-                        ForEach(mainScreenViewModel.destinations) { destination in
+                        ForEach(viewModel.destinations) { destination in
                             NavigationLink(value: destination) {
-                                HStack(spacing: 30) {
-                                    destination.mainImage
-                                        .resizable()
-                                        .frame(width: 100, height: 100)
-                                        .cornerRadius(10)
+                                VStack(spacing: 0) {
+                                    viewModel.setImage(imageURL: URL(string: destination.mainImage)!, width: 300, height: 200)
                                     Text("\(destination.cityName)")
                                         .bold()
-                                        .font(.system(size: 30))
+                                        .font(.system(size: 20))
                                     Spacer()
                                 }
                             }
-                            .navigationDestination(for: DestinationModel.self) { destination in
-                                DestinationDetailScreen(destinationModel: destination, path: $path)
+                            .navigationDestination(for: Destination.self) { destination in
+                                DestinationDetailScreen(viewModel: viewModel, destination: destination, path: $path)
                             }
                             .foregroundStyle(Color.black)
                         }
@@ -49,10 +46,13 @@ struct MainScreenView: View {
                 }
                 .alert(isPresented: $isTipShowed, content: {
                     Alert(title: Text("Traveling Tip"),
-                          message: Text("\(mainScreenViewModel.tips.randomElement()!)"),
+                          message: Text("\(viewModel.tips.randomElement()!)"),
                           primaryButton: .destructive(Text("OK")),
                           secondaryButton: .cancel())
                 })
+            }
+            .task {
+                viewModel.fetchDestinationData()
             }
         }
         .padding()
@@ -60,5 +60,5 @@ struct MainScreenView: View {
 }
 
 #Preview {
-    MainScreenView()
+    MainScreen()
 }
