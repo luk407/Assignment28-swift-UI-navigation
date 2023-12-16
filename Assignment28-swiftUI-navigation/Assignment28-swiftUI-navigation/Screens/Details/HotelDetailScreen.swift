@@ -9,29 +9,34 @@ import SwiftUI
 
 struct HotelDetailScreen: View {
     
-    @ObservedObject var destination: DestinationModel
+    @ObservedObject var destinationModel: DestinationModel
     
     @Binding var path: NavigationPath
     
     var body: some View {
         VStack(spacing: 20, content: {
-            destination.hotels.image
+            destinationModel.hotels.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)
             HStack {
-                Text("Name: \(destination.hotels.name)")
+                Text("Name: \(destinationModel.hotels.name)")
                 Spacer()
             }
             HStack {
-                Text("Description: \(destination.hotels.description)")
+                Text("Description: \(destinationModel.hotels.description)")
                 Spacer()
             }
             HStack {
-                Text("Price: \(destination.hotels.price ?? "")")
+                Text("Price: \(destinationModel.hotels.price ?? "")")
                 Spacer()
             }
             Spacer()
+            Button(action: {
+                path = NavigationPath()
+            }, label: {
+                Text("Back to main screen")
+            })
         })
         .navigationTitle("Hotel")
     }

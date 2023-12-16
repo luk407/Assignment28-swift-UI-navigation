@@ -17,13 +17,11 @@ struct MainScreenView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            NavigationStack {
+            NavigationStack(path: $path) {
                 List {
                     ScrollView {
                         ForEach(mainScreenViewModel.destinations) { destination in
-                            NavigationLink {
-                                DestinationDetailScreen(destination: destination, path: $path)
-                            } label: {
+                            NavigationLink(value: destination) {
                                 HStack(spacing: 30) {
                                     destination.mainImage
                                         .resizable()
@@ -34,6 +32,9 @@ struct MainScreenView: View {
                                         .font(.system(size: 30))
                                     Spacer()
                                 }
+                            }
+                            .navigationDestination(for: DestinationModel.self) { destination in
+                                DestinationDetailScreen(destinationModel: destination, path: $path)
                             }
                             .foregroundStyle(Color.black)
                         }

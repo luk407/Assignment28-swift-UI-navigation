@@ -46,6 +46,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A18653CC2B2DB85D007CA426 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1CE7E952B2A07050089D10B /* DestinationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A18653CD2B2DB87B007CA426 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1CE7E972B2A08110089D10B /* MainScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A18653CE2B2DB893007CA426 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A1CE7E842B29FFC40089D10B /* MainScreenView.swift */,
+				A1CE7E992B2A226B0089D10B /* DestinationDetailScreen.swift */,
+				A18653CF2B2DB8C5007CA426 /* Details */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A18653CF2B2DB8C5007CA426 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A1CE7E9B2B2A2A8D0089D10B /* TransportDetailsScreen.swift */,
+				A1CE7E9D2B2A2B600089D10B /* MustSeeDetailScreen.swift */,
+				A1CE7E9F2B2A2B9D0089D10B /* HotelDetailScreen.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		A18653D02B2DB8FD007CA426 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1CE7E822B29FFC40089D10B /* Assignment28_swiftUI_navigationApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		A1CE7E762B29FFC40089D10B = {
 			isa = PBXGroup;
 			children = (
@@ -65,14 +109,10 @@
 		A1CE7E812B29FFC40089D10B /* Assignment28-swiftUI-navigation */ = {
 			isa = PBXGroup;
 			children = (
-				A1CE7E822B29FFC40089D10B /* Assignment28_swiftUI_navigationApp.swift */,
-				A1CE7E842B29FFC40089D10B /* MainScreenView.swift */,
-				A1CE7E992B2A226B0089D10B /* DestinationDetailScreen.swift */,
-				A1CE7E9B2B2A2A8D0089D10B /* TransportDetailsScreen.swift */,
-				A1CE7E9D2B2A2B600089D10B /* MustSeeDetailScreen.swift */,
-				A1CE7E9F2B2A2B9D0089D10B /* HotelDetailScreen.swift */,
-				A1CE7E972B2A08110089D10B /* MainScreenViewModel.swift */,
-				A1CE7E952B2A07050089D10B /* DestinationModel.swift */,
+				A18653D02B2DB8FD007CA426 /* App */,
+				A18653CE2B2DB893007CA426 /* Screens */,
+				A18653CD2B2DB87B007CA426 /* ViewModel */,
+				A18653CC2B2DB85D007CA426 /* Model */,
 				A1CE7E862B29FFC50089D10B /* Assets.xcassets */,
 				A1CE7E882B29FFC50089D10B /* Preview Content */,
 			);

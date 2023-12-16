@@ -9,52 +9,47 @@ import SwiftUI
 
 struct DestinationDetailScreen: View {
     
-    @ObservedObject var destination: DestinationModel
+    var destinationModel: DestinationModel
     
     @Binding var path: NavigationPath
     
     var body: some View {
         VStack(spacing: 10) {
-            destination.mainImage
+            destinationModel.mainImage
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)
             HStack(spacing: 20, content: {
-                destination.generalImages[0]
+                destinationModel.generalImages[0]
                     .resizable()
                     .frame(width: 100, height: 100)
                     .cornerRadius(10)
-                destination.generalImages[1]
+                destinationModel.generalImages[1]
                     .resizable()
                     .frame(width: 100, height: 100)
                     .cornerRadius(10)
-                destination.generalImages[2]
+                destinationModel.generalImages[2]
                     .resizable()
                     .frame(width: 100, height: 100)
                     .cornerRadius(10)
             })
             
             VStack(spacing: 20, content: {
-                NavigationLink {
-                    TransportDetailsScreen(destination: destination, path: $path)
-                } label: {
+                NavigationLink(destination: TransportDetailsScreen(destinationModel: destinationModel, path: $path)) {
                     Text("Transport")
                 }
-                NavigationLink {
-                    MustSeeDetailScreen(destination: destination, path: $path)
-                } label: {
+                NavigationLink(destination: MustSeeDetailScreen(destinationModel: destinationModel, path: $path)) {
                     Text("Must See")
                 }
-                NavigationLink {
-                    HotelDetailScreen(destination: destination, path: $path)
-                } label: {
+                NavigationLink(destination: HotelDetailScreen(destinationModel: destinationModel, path: $path)) {
                     Text("Hotel")
                 }
             })
             
+            
             Spacer()
         }
-        .navigationTitle(destination.cityName)
+        .navigationTitle(destinationModel.cityName)
     }
 }
 
